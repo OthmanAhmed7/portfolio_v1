@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ProcessCard = () => {
   return (
-    <div className="grid grid-cols-4 gap-20 mt-10">
+    <section className="grid grid-cols-4 gap-20 mt-10">
       {ProcessInfo.map((info) => (
         <div
           key={info.id}
@@ -23,7 +23,7 @@ const ProcessCard = () => {
           <p className="text-slate-500">{info.body}</p>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

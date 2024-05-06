@@ -11,6 +11,10 @@
   scroll-behavior: smooth;
 }
 
+.zigzag:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .highlight {
   background: linear-gradient(to bottom, transparent 50%, #ff6584);
   width: fit-content;
@@ -22,7 +26,7 @@
   }
 
   .header {
-    @apply highlight uppercase font-semibold text-2xl mx-auto;
+    @apply uppercase font-semibold text-2xl mx-auto mb-10;
   }
 
   .sectionPadding {

@@ -101,3 +101,57 @@ export const skillsInfo = [
     icon: "/images/framer-motion.svg",
   },
 ];
+
+export const projectInfo = [
+  {
+    id: 1,
+    header: "Hoo Bank - A UI implementation for a bank website",
+    usedTech: ["React", "Tailwind", "Figma"],
+    image: "/images/hoobank.png",
+    github: "https://github.com/OthmanAhmed7/hoobank",
+    vercel: "https://hoobank-one-sigma.vercel.app/",
+  },
+
+  {
+    id: 2,
+    header: "Portfolio - A Personal Portfolio",
+    usedTech: ["next", "Tailwind", "Framer"],
+    image: "/images/portfolio.png",
+    github: "https://github.com/OthmanAhmed7/portfolio_v1",
+    vercel: "https://portfolio-v1-red-kappa.vercel.app/",
+  },
+
+  {
+    id: 3,
+    header: "GPT3 - A UI implementation for a GPT-3 website",
+    usedTech: ["React", "CSS", "Figma"],
+    image: "/images/gpt3.png",
+    github: "https://github.com/OthmanAhmed7/gpt3",
+    vercel: "https://gpt3-six-sigma.vercel.app/",
+  },
+
+  {
+    id: 4,
+    header: "Sushiman - A UI implementation for a sushi restaurant's website",
+    usedTech: ["HTML", "CSS", "JavaScript"],
+    image: "/images/sushiman.png",
+    github: "https://github.com/OthmanAhmed7/sushiman",
+    vercel: "https://sushiman-livid.vercel.app/",
+  },
+];
+
+export const inputs = [
+  {
+    id: 1,
+    name: "name",
+    type: "text",
+    label: "Names",
+  },
+
+  {
+    id: 2,
+    name: "email",
+    type: "email",
+    label: "Email",
+  },
+];

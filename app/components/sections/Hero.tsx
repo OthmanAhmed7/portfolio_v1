@@ -4,9 +4,9 @@ import Button from "../small/Button";
 
 const Hero = () => {
   return (
-    <section className="px-8 max-w-[1440px] h-[100vh] flex items-center justify-between mx-auto gap-4">
+    <section className="px-8 max-w-[1024px] h-[100vh] flex items-center justify-between mx-auto gap-4">
       <div>
-        <h1 className="text-7xl uppercase text-black mb-4">
+        <h1 className="text-5xl uppercase text-black mb-4">
           <span className="text-xl highlight tracking-[.1em]">
             i&apos;m here to
           </span>
@@ -18,8 +18,8 @@ const Hero = () => {
       <Image
         src="/images/hero-1.svg"
         alt="my personal photo"
-        width={600}
-        height={600}
+        width={500}
+        height={500}
       />
     </section>
   );
