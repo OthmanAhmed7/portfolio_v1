@@ -15,7 +15,10 @@ const config: Config = {
       },
 
       colors: {
-        "main-color": "#ff6584",
+        "main-color": "#102C57",
+        "light-color": "#FEFAF6",
+        "dark-color": "#EADBC8",
+        "darker-color": "#DAC0A3",
       },
     },
   },
