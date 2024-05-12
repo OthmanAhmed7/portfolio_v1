@@ -4,29 +4,29 @@ import Button from "../small/Button";
 
 const Navbar = () => {
   return (
-    <nav className="text-black w-full sectionPadding fixed bg-white">
+    <nav className="text-black w-full sectionPadding fixed bg-[#FEFAF6]">
       <div className="max-w-[1024px] flex justify-between mx-auto items-center">
         <Logo />
 
-        <ul className="flex gap-10">
+        <ul className="flex gap-10 text-main-color">
           <li className="hover:text-main-color">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li className="hover:text-main-color">
-            <a href="#">Process</a>
+            <a href="#process">Process</a>
           </li>
           <li className="hover:text-main-color">
-            <a href="#">Work</a>
+            <a href="#work">Work</a>
           </li>
           <li className="hover:text-main-color">
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="hover:text-main-color">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
 
-        <Button name={"Let's Talk"} />
+        <Button name={"Let's Talk"} link={"#contact"} />
       </div>
     </nav>
   );

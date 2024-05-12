@@ -3,7 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="flex flex-col max-w-[1024px] mx-auto">
+    <section id="about" className="flex flex-col max-w-[1024px] mx-auto">
       <h1 className="header highlight">About Me</h1>
 
       <div className="flex gap-4 justify-between items-center">

@@ -16,8 +16,32 @@
 }
 
 .highlight {
-  background: linear-gradient(to bottom, transparent 50%, #ff6584);
+  background: linear-gradient(to bottom, transparent 50%, #dac0a3);
   width: fit-content;
+}
+
+input:invalid[focused="true"] {
+  display: block;
+}
+input:invalid[focused="true"] ~ span {
+  border: 1px solid red;
+}
+
+.heroAnimate {
+  animation: heroAnimate 6s ease-in-out infinite 1s;
+}
+@keyframes heroAnimate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
 
 @layer utilities {

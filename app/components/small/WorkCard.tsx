@@ -10,10 +10,12 @@ const WorkCard = () => {
       {projectInfo.map((info) => (
         <div
           key={info.id}
-          className="flex justify-between items-center shadow-md rounded-lg p-4 h-[15rem] px-14 w-[65rem] zigzag"
+          className="flex justify-between items-center shadow-xl bg-dark-color rounded-lg p-4 h-fit px-14 w-[65rem] zigzag"
         >
           <div className="w-[50%]">
-            <h1 className="text-3xl font-semibold">{info.header}</h1>
+            <h1 className="text-3xl font-semibold text-main-color">
+              {info.header}
+            </h1>
 
             <div className="flex gap-3 mt-2">
               <div className="bg-slate-200 py-[2px] px-2 rounded-md">
@@ -54,9 +56,10 @@ const WorkCard = () => {
           <div className="w-[50%]">
             <Image
               width={300}
-              height={150}
+              height={300}
               src={info.image}
               alt={info.header}
+              className="rounded-md"
             />
           </div>
         </div>
