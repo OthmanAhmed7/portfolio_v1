@@ -5,10 +5,11 @@ import Skills from "./components/sections/Skills";
 import Work from "./components/sections/Work";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#FEFAF6]">
       <Navbar />
       <Hero />
       <Skills />
@@ -16,6 +17,7 @@ export default function Home() {
       <Work />
       <About />
       <Contact />
+      <Footer />
     </div>
   );
 }

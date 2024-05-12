@@ -4,11 +4,11 @@ import Button from "../small/Button";
 
 const Navbar = () => {
   return (
-    <nav className="text-black w-full sectionPadding fixed bg-white">
+    <nav className="text-black w-full sectionPadding fixed bg-[#FEFAF6]">
       <div className="max-w-[1024px] flex justify-between mx-auto items-center">
         <Logo />
 
-        <ul className="flex gap-10">
+        <ul className="flex gap-10 text-main-color">
           <li className="hover:text-main-color">
             <a href="#">Home</a>
           </li>

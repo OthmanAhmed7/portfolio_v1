@@ -32,71 +32,77 @@ export const skillsInfo = [
   {
     id: 1,
     name: "HTML5",
-    icon: "/images/html.png",
+    icon: "/images/html-1.svg",
   },
 
   {
     id: 2,
     name: "CSS3",
-    icon: "/images/CSS3.png",
+    icon: "/images/css-3.svg",
   },
 
   {
     id: 3,
     name: "JavaScript",
-    icon: "/images/JavaScript.png",
+    icon: "/images/logo-javascript.svg",
   },
 
   {
     id: 4,
     name: "React.js",
-    icon: "/images/React.png",
+    icon: "/images/react-2.svg",
   },
 
   {
     id: 5,
     name: "Next.js",
-    icon: "/images/Next.js.png",
+    icon: "/images/next-js.svg",
   },
 
   {
     id: 6,
     name: "TypeScript",
-    icon: "/images/TypeScript.png",
+    icon: "/images/typescript.svg",
   },
 
   {
     id: 7,
     name: "Sass",
-    icon: "/images/Sass.png",
+    icon: "/images/sass-1.svg",
   },
 
   {
     id: 8,
     name: "Tailwind.CSS",
-    icon: "/images/Tailwind CSS.png",
+    icon: "/images/tailwind-css-2.svg",
   },
 
   {
     id: 9,
     name: "PostgresSQL",
-    icon: "/images/PostgresSQL.png",
+    icon: "/images/postgresql.svg",
   },
 
   {
     id: 10,
+    name: "SQLite3",
+    icon: "/images/sqlite.svg",
+  },
+
+  {
+    id: 11,
     name: "Git",
-    icon: "/images/Git.png",
+    icon: "/images/git-icon.svg",
   },
 
   {
-    id: 11,
+    id: 12,
     name: "GitHub",
-    icon: "/images/GitHub.png",
+    icon: "/images/github-icon-1.svg",
   },
 
   {
-    id: 11,
+    id: 13,
     name: "Framer Motion",
     icon: "/images/framer-motion.svg",
   },
@@ -145,7 +151,10 @@ export const inputs = [
     id: 1,
     name: "name",
     type: "text",
-    label: "Names",
+    label: "Name",
+    errorMessage: "Name should be 3-16 characters without special characters",
+    required: true,
+    pattern: "^[A-Za-z0-9]{3,16}$",
   },
 
   {
@@ -153,5 +162,7 @@ export const inputs = [
     name: "email",
     type: "email",
     label: "Email",
+    errorMessage: "Should be a valid email address!",
+    required: true,
   },
 ];

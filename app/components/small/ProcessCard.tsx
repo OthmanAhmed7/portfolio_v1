@@ -15,7 +15,7 @@ const ProcessCard = () => {
             height={50}
             src={info.icon}
             alt={info.header}
-            className="bg-main-color p-2 rounded-md"
+            className="bg-main-color p-2 rounded-md text-white"
           />
 
           <h1 className="font-semibold text-lg">{info.header}</h1>

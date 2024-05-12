@@ -5,36 +5,52 @@ import FormInputs from "./FormInputs";
 import Button from "./Button";
 import { inputs } from "@/app/constants/data";
 
+interface FormValues {
+  [key: string]: string;
+}
+
 const Form = () => {
-  const [values, setValues] = useState({
+  const [values, setValues] = useState<FormValues>({
     name: "",
     email: "",
-    message: "",
   });
+
+  const [textArea, setTextArea] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+
+  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setTextArea(e.target.value);
+  };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <section className="max-w-[1024px]">
+      <form onSubmit={handleSubmit} className="flex flex-col w-[50%] gap-6">
         {inputs.map((input) => (
           <FormInputs
             key={input.id}
             {...input}
             value={values[input.name]}
-            onChange={handleChange}
+            onChange={handleInputChange}
           />
         ))}
-        <label>Message</label>
-        <textarea name="message"></textarea>
+        <div>
+          <label className="font-semibold mt-4">Message</label>
+          <textarea
+            name="message"
+            value={textArea}
+            onChange={handleTextAreaChange}
+            className="border border-black w-[27rem] h-[12rem]"
+          ></textarea>
+        </div>
         <Button name="Submit" />
       </form>
-    </div>
+    </section>
   );
 };
 
