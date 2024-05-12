@@ -48,7 +48,9 @@ const Form = () => {
             className="border border-black w-[27rem] h-[12rem]"
           ></textarea>
         </div>
-        <Button name="Submit" />
+        <button className="w-[8rem] rounded-md py-[6px] bg-main-color text-white">
+          Submit
+        </button>
       </form>
     </section>
   );
