@@ -54,6 +54,6 @@ input:invalid[focused="true"] ~ span {
   }
 
   .sectionPadding {
-    @apply px-8 py-4;
+    @apply px-8 py-6;
   }
 }

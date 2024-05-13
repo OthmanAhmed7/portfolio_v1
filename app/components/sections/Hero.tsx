@@ -3,12 +3,13 @@ import Image from "next/image";
 import Button from "../small/Button";
 import { IoLogoLinkedin } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
+import ToTop from "../small/ToTop";
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="px-8 max-w-[1024px] h-[100vh] flex items-center justify-between mx-auto gap-4"
+      className="px-8 max-w-[1024px] h-[100vh] flex items-center justify-between mx-auto gap-4 sectionPadding"
     >
       <div>
         <h1 className="text-5xl uppercase text-black mb-4">
@@ -44,6 +45,8 @@ const Hero = () => {
         height={400}
         className="heroAnimate"
       />
+
+      <ToTop />
     </section>
   );
 };

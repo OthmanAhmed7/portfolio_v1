@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="max-w-[1024px] mx-auto flex flex-col mt-10"
+      className="max-w-[1024px] mx-auto flex flex-col mt-10 sectionPadding"
     >
       <h1 className="header highlight">Contact Me</h1>
 

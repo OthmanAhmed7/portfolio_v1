@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import FormInputs from "./FormInputs";
-import Button from "./Button";
 import { inputs } from "@/app/constants/data";
 
 interface FormValues {

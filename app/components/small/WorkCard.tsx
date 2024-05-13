@@ -6,7 +6,7 @@ import { GrGithub } from "react-icons/gr";
 
 const WorkCard = () => {
   return (
-    <section className="flex flex-col gap-14 mt-10 rev justify-center items-center">
+    <section className="flex flex-col gap-14 justify-center items-center">
       {projectInfo.map((info) => (
         <div
           key={info.id}
