@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SkillIcon = () => {
   return (
-    <div className="grid grid-cols-7 gap-3 mt-6 place-items-center">
+    <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-3 mt-6 place-items-center">
       {skillsInfo.map((info) => (
         <div key={info.id} className="flex flex-col items-center gap-2">
           <div className=" rounded-full shadow-xl w-[5rem] h-[5rem] flex justify-center items-center">

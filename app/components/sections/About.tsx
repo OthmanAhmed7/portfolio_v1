@@ -9,8 +9,8 @@ const About = () => {
     >
       <h1 className="header highlight">About Me</h1>
 
-      <div className="flex gap-4 justify-between items-center">
-        <div className="text-slate-500 w-[60%]">
+      <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
+        <div className="text-slate-500 lg:w-[60%] w-full">
           <p>
             As a frontend developer, my passion for crafting immersive digital
             experiences drives me in every project I undertake. I remember the

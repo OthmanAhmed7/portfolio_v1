@@ -9,9 +9,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="px-8 max-w-[1024px] h-[100vh] flex items-center justify-between mx-auto gap-4 sectionPadding"
+      className="px-8 max-w-[1024px] h-[100vh] flex flex-col lg:flex-row items-center justify-between mx-auto gap-4 sectionPadding"
     >
-      <div>
+      <div className="mt-24 lg:mt-0">
         <h1 className="text-5xl uppercase text-black mb-4">
           <span className="text-xl highlight tracking-[.1em] inline-block mb-2">
             i&apos;m here to

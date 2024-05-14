@@ -13,7 +13,7 @@ const Contact = () => {
     >
       <h1 className="header highlight">Contact Me</h1>
 
-      <div className="flex">
+      <div className="flex flex-col md:flex-row gap-3">
         <Form />
 
         <div className="mt-5 flex flex-col gap-4">

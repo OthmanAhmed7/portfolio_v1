@@ -10,9 +10,9 @@ const WorkCard = () => {
       {projectInfo.map((info) => (
         <div
           key={info.id}
-          className="flex justify-between items-center shadow-xl bg-dark-color rounded-lg p-4 h-fit px-14 w-[65rem] zigzag"
+          className="flex lg:flex-row flex-col justify-between items-center shadow-xl bg-dark-color rounded-lg p-4 h-fit px-14 xl:w-[65rem] lg:w-[55rem] md:w-[40rem] w-[30rem] zigzag"
         >
-          <div className="w-[50%]">
+          <div className="lg:w-[50%] w-full mb-7">
             <h1 className="text-3xl font-semibold text-main-color">
               {info.header}
             </h1>
@@ -53,7 +53,7 @@ const WorkCard = () => {
             </div>
           </div>
 
-          <div className="w-[50%]">
+          <div className="lg:w-[50%] w-full">
             <Image
               width={300}
               height={300}

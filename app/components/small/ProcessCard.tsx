@@ -4,23 +4,25 @@ import Image from "next/image";
 
 const ProcessCard = () => {
   return (
-    <section className="grid grid-cols-4 gap-20 mt-10">
+    <section className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-20 mt-10 place-items-center">
       {ProcessInfo.map((info) => (
         <div
           key={info.id}
-          className="flex flex-col gap-3 w-[15rem] shadow-lg p-5 rounded-lg shadow-slate-300 hover:scale-105"
+          className="flex flex-col gap-3 xl:w-[14.5rem] md:w-[18rem] sm:w-[20rem] h-[20rem] md:h-[22rem] shadow-lg p-5 rounded-lg shadow-slate-300 hover:scale-105"
         >
           <Image
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             src={info.icon}
             alt={info.header}
             className="bg-main-color p-2 rounded-md text-white"
           />
 
-          <h1 className="font-semibold text-lg">{info.header}</h1>
+          <h1 className="font-semibold md:text-lg sm:text-2xl">
+            {info.header}
+          </h1>
 
-          <p className="text-slate-500">{info.body}</p>
+          <p className="text-slate-500 text-lg">{info.body}</p>
         </div>
       ))}
     </section>

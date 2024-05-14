@@ -21,7 +21,9 @@ const ToTop = () => {
   }, []);
   return (
     <section
-      className={`${hidden ? "hidden" : ""} fixed right-[10rem] mr-8 bottom-24`}
+      className={`${
+        hidden ? "hidden" : ""
+      } fixed 2xl:right-[10rem] right-[1rem] mr-8 bottom-24`}
     >
       <button className="p-3 bg-main-color text-white rounded-md">
         <a href="#home">
