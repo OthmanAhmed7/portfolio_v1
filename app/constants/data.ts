@@ -164,5 +164,6 @@ export const inputs = [
     label: "Email",
     errorMessage: "Should be a valid email address!",
     required: true,
+    pattern: "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/",
   },
 ];

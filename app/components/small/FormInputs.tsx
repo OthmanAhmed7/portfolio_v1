@@ -15,11 +15,12 @@ const FormInputs = (props: any) => {
       <input
         {...inputProps}
         onChange={onChange}
-        className="border border-black w-[27rem] h-[2rem]"
+        required
+        className="border border-black w-[27rem] h-[2rem] outline-none"
         onBlur={handleFocus}
         focused={focused.toString()}
       />
-      <span className="text-xs text-rose-500 hidden">{errorMessage}</span>
+      <span className="text-sm text-rose-500 hidden">{errorMessage}</span>
     </div>
   );
 };
