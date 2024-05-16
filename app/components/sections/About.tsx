@@ -1,13 +1,33 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { MotionDiv } from "../motions/MotionDiv";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
   return (
-    <section className="flex flex-col max-w-[1024px] mx-auto">
+    <section
+      id="about"
+      className="flex flex-col max-w-[1024px] mx-auto sectionPadding"
+    >
       <h1 className="header highlight">About Me</h1>
 
-      <div className="flex gap-4 justify-between items-center">
-        <div className="text-slate-500 w-[60%]">
+      <div
+        ref={ref}
+        className="flex flex-col lg:flex-row gap-4 justify-between items-center"
+      >
+        <MotionDiv
+          initial={{ x: -300, opacity: 0 }}
+          animate={inView && { x: 0, opacity: 50 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+          className="text-slate-500 lg:w-[60%] w-full"
+        >
           <p>
             As a frontend developer, my passion for crafting immersive digital
             experiences drives me in every project I undertake. I remember the
@@ -34,15 +54,21 @@ const About = () => {
             it&rsquo;s about creating meaningful connections between users and
             technology, enriching lives through the digital experiences I craft.
           </p>
-        </div>
+        </MotionDiv>
 
-        <Image
-          width={400}
-          height={400}
-          src={"/images/Othman.png"}
-          alt="my photo"
-          className="rounded-xl"
-        />
+        <MotionDiv
+          initial={{ x: 300, opacity: 0 }}
+          animate={inView && { x: 0, opacity: 50 }}
+          transition={{ ease: "easeInOut", duration: 1 }}
+        >
+          <Image
+            width={400}
+            height={400}
+            src={"/images/Othman.png"}
+            alt="my photo"
+            className="rounded-xl"
+          />
+        </MotionDiv>
       </div>
     </section>
   );

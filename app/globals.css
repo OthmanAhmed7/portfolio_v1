@@ -11,8 +11,16 @@
   scroll-behavior: smooth;
 }
 
-.zigzag:nth-child(even) {
-  flex-direction: row-reverse;
+@media only screen and (min-width: 375px) {
+  .zigzag:nth-child(even) {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 945px) {
+  .zigzag:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
 
 .highlight {
@@ -54,6 +62,6 @@ input:invalid[focused="true"] ~ span {
   }
 
   .sectionPadding {
-    @apply px-8 py-4;
+    @apply px-8 py-6;
   }
 }
