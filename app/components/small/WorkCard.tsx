@@ -1,15 +1,38 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { projectInfo } from "@/app/constants/data";
 import { IoMdEye } from "react-icons/io";
 import { GrGithub } from "react-icons/gr";
+import { MotionDiv } from "../motions/MotionDiv";
+import { useInView } from "react-intersection-observer";
 
 const WorkCard = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <section className="flex flex-col gap-14 justify-center items-center">
+    <section
+      ref={ref}
+      className="flex flex-col gap-14 justify-center items-center"
+    >
       {projectInfo.map((info) => (
-        <div
+        <MotionDiv
           key={info.id}
+          initial={
+            info.id % 2 === 0
+              ? { x: -1000, opacity: 0 }
+              : { x: 1000, opacity: 0 }
+          }
+          animate={inView && { x: 0, opacity: 1 }}
+          transition={{
+            delay: info.id * 0.25,
+            ease: "easeInOut",
+            duration: 0.8,
+          }}
           className="flex lg:flex-row flex-col justify-between items-center shadow-xl bg-dark-color rounded-lg p-4 h-fit px-14 xl:w-[65rem] lg:w-[55rem] md:w-[40rem] w-[30rem] zigzag"
         >
           <div className="lg:w-[50%] w-full mb-7">
@@ -62,7 +85,7 @@ const WorkCard = () => {
               className="rounded-md"
             />
           </div>
-        </div>
+        </MotionDiv>
       ))}
     </section>
   );
