@@ -14,13 +14,16 @@ const variants = {
 const ProcessCard = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.2,
   });
 
   return (
-    <section className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-20 mt-10 place-items-center">
+    <section
+      ref={ref}
+      className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-20 mt-10 place-items-center"
+    >
       {ProcessInfo.map((info) => (
-        <div key={info.id} ref={ref}>
+        <div key={info.id}>
           <MotionDiv
             variants={variants}
             initial="hidden"

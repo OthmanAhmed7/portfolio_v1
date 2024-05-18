@@ -7,7 +7,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [navHeight, setNavHeight] = useState<number>(0);
   const navbarRef = useRef<HTMLDivElement>(null);
