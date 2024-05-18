@@ -14,7 +14,7 @@ const variants = {
 const ProcessCard = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.1,
   });
 
   return (
@@ -24,7 +24,7 @@ const ProcessCard = () => {
           <MotionDiv
             variants={variants}
             initial="hidden"
-            animate={inView ? "visible" : "hidden"}
+            animate={inView && "visible"}
             transition={{
               delay: info.id * 0.25,
               ease: "easeInOut",

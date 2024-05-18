@@ -29,7 +29,10 @@ const Form = () => {
   };
   return (
     <section className="max-w-[1024px]">
-      <form onSubmit={handleSubmit} className="flex flex-col w-[50%] gap-6">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col md:w-[50%] w-[20rem] gap-6"
+      >
         {inputs.map((input) => (
           <FormInputs
             key={input.id}
@@ -44,7 +47,7 @@ const Form = () => {
             name="message"
             value={textArea}
             onChange={handleTextAreaChange}
-            className="border border-black w-[27rem] h-[12rem] outline-none"
+            className="border border-black w-[19.7rem] md:w-[27rem] h-[12rem] outline-none"
           ></textarea>
         </div>
         <button className="w-[8rem] rounded-md py-[6px] bg-main-color text-white">

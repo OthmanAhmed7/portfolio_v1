@@ -5,13 +5,9 @@ import { FaRegCopyright } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-3 max-w-[1024px] mx-auto justify-between pt-4 mb-4 mt-8 px-6 items-center border-t-2">
+    <footer className="flex flex-col gap-1 max-w-[1024px] mx-auto justify-between pt-4 mb-4 mt-8 px-6 items-center border-t-2">
       <div>
-        <p className="text-slate-500 text-sm flex items-center gap-1">
-          Copyright{" "}
-          <span className="flex items-center gap-1">
-            <FaRegCopyright /> 2024
-          </span>{" "}
+        <p className="text-slate-500 text-sm flex items-center">
           All rights reserved | Othman Ahmed
         </p>
       </div>
@@ -29,6 +25,12 @@ const Footer = () => {
           </a>
         </button>
       </div>
+      <p className="text-slate-500 text-xs flex items-center gap-1">
+        Copyright{" "}
+        <span className="flex items-center gap-1">
+          <FaRegCopyright /> 2024
+        </span>{" "}
+      </p>
     </footer>
   );
 };

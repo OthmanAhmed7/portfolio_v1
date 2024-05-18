@@ -106,7 +106,7 @@ const Navbar = () => {
               !toggle ? "hidden" : "absolute"
             }`}
           >
-            <div className="fixed right-0 top-0 bg-light-color w-[50%] h-[100vh] pt-[6rem] text-center shadow-2xl">
+            <div className="fixed right-0 top-0 bg-light-color w-[50%] h-screen pt-[6rem] text-center shadow-2xl">
               <ul className="text-main-color">
                 <li className="hover:text-main-color mb-2">
                   <a href="#" onClick={(e) => scrollToSection("home", e)}>

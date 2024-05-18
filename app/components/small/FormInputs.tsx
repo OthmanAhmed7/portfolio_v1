@@ -16,7 +16,7 @@ const FormInputs = (props: any) => {
         {...inputProps}
         onChange={onChange}
         required
-        className="border border-black w-[27rem] h-[2rem] outline-none"
+        className="border border-black w-[19.7rem] md:w-[27rem] h-[2rem] outline-none"
         onBlur={handleFocus}
         focused={focused.toString()}
       />
