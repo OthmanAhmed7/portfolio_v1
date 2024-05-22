@@ -3,10 +3,7 @@ import WorkCard from "../small/WorkCard";
 
 const Work = () => {
   return (
-    <section
-      id="work"
-      className="sectionPadding flex flex-col max-w-[1024px] mx-auto"
-    >
+    <section id="work" className="py-6 flex flex-col max-w-[1024px] mx-auto">
       <h1 className="header">
         Featured <span className="highlight">Projects</span>
       </h1>

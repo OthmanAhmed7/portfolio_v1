@@ -17,25 +17,25 @@ const WorkCard = () => {
   return (
     <section
       ref={ref}
-      className="flex flex-col gap-14 justify-center items-center"
+      className="flex flex-col gap-14 justify-center items-center overflow-hidden"
     >
       {projectInfo.map((info) => (
         <MotionDiv
           key={info.id}
           initial={
             info.id % 2 === 0
-              ? { x: -1000, opacity: 0 }
-              : { x: 1000, opacity: 0 }
+              ? { x: -300, opacity: 0, visibility: "hidden" }
+              : { x: 300, opacity: 0, visibility: "hidden" }
           }
-          animate={inView && { x: 0, opacity: 1 }}
+          animate={inView && { x: 0, opacity: 50, visibility: "visible" }}
           transition={{
             delay: info.id * 0.25,
             ease: "easeInOut",
             duration: 0.8,
           }}
-          className="flex lg:flex-row flex-col justify-between items-center shadow-xl bg-dark-color rounded-lg p-4 h-fit xl:w-[65rem] lg:w-[55rem] md:w-[40rem] w-[20rem] zigzag"
+          className="flex lg:flex-row flex-col gap-4 justify-between items-center shadow-xl bg-dark-color rounded-lg py-4 px-16 h-fit xl:w-[65rem] lg:w-[55rem] md:w-[40rem] w-[20rem] zigzag"
         >
-          <div className="lg:w-[50%] w-full mb-7">
+          <div className="lg:w-[50%] w-full">
             <h1 className="text-3xl font-semibold text-main-color">
               {info.header}
             </h1>

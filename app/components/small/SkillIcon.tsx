@@ -14,13 +14,16 @@ const variants = {
 const SkillIcon = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.1,
   });
 
   return (
-    <div className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-3 mt-6 place-items-center">
+    <div
+      ref={ref}
+      className="grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-3 mt-6 place-items-center"
+    >
       {skillsInfo.map((info) => (
-        <div key={info.id} ref={ref}>
+        <div key={info.id}>
           <MotionDiv
             variants={variants}
             initial="hidden"

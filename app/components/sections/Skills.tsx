@@ -3,7 +3,7 @@ import SkillIcon from "../small/SkillIcon";
 
 const Skills = () => {
   return (
-    <div className="sectionPadding flex flex-col max-w-[1024px] mx-auto mt-10 md:mt-0">
+    <div className="sectionPadding flex flex-col max-w-[1024px] mx-auto">
       <h1 className="header highlight">My Skills</h1>
 
       <p className="mx-auto mt-[-27px]">
